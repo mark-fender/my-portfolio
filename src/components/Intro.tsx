@@ -7,9 +7,11 @@ import Link from 'next/link';
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import useSectionInView from '../hooks/useSectionInView';
+import useActiveSection from '../hooks/useActiveSection';
 
 const Intro = () => {
   const { ref } = useSectionInView({ sectionName: 'Home' });
+  const { setLastClickTime } = useActiveSection();
 
   return (
     <section ref={ref} className='mt-8 max-w-[75rem] text-center sm:mb-0 scroll-mt-36' id='home'>
@@ -52,6 +54,7 @@ const Intro = () => {
         </Link>
         <a
           href='/CV.pdf'
+          onClick={() => setLastClickTime(Date.now())}
           download
           className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack'>
           Download CV <HiDownload className='opacity-70 group-hover:translate-y-1 transition' />

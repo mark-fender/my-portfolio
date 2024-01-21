@@ -3,6 +3,8 @@ import { ReactNode } from 'react';
 import './globals.css';
 import ActiveSectionContextProvider from '../context/activeSectionContext';
 import Header from '../components/Header';
+import { Toaster } from 'react-hot-toast';
+import Footer from '../components/Footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -18,11 +20,16 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
         <div className='bg-[#cdd3f8] absolute top-[0] -z-10 right-[5rem] h-[31.25rem] w-[50em] rounded-full blur-[10rem] sm:w-[68.75rem]' />
         <div className='bg-[#cff1fd] absolute top-[10rem] -z-10 left-[-55rem] h-[31.25rem] w-[50rem] rounded-full blur-[10rem] sm:w-[90rem] md:left-[-35rem] lg:left-[-30rem] xl:left-[-15rem] 2xl:left-[-5rem]]' />
 
-        <div className='bg-[#cff1fd] absolute bottom-[-6rem] -z-10 right-[5rem] h-[15rem] w-[25em] rounded-full blur-[10rem] sm:w-[68.75rem]' />
-        <div className='bg-[#cdd3f8] absolute bottom-[-10rem] -z-10 left-[-55rem] h-[15rem] w-[25rem] rounded-full blur-[10rem] sm:w-[90rem] md:left-[-35rem] lg:left-[-30rem] xl:left-[-15rem] 2xl:left-[-5rem]]' />
+        <div className='bg-[#cff1fd] absolute bottom-[5rem] -z-10 right-[5rem] h-[15rem] w-[25em] rounded-full blur-[10rem] sm:w-[68.75rem]' />
+        <div className='bg-[#cdd3f8] absolute bottom-[2rem] -z-10 left-[-55rem] h-[15rem] w-[25rem] rounded-full blur-[10rem] sm:w-[90rem] md:left-[-35rem] lg:left-[-30rem] xl:left-[-15rem] 2xl:left-[-5rem]]' />
         <ActiveSectionContextProvider>
           <Header />
+
           {children}
+
+          <Footer />
+
+          <Toaster position='top-right' />
         </ActiveSectionContextProvider>
       </body>
     </html>

@@ -22,7 +22,7 @@ const Experience = () => {
         />
         <ul className='ml-16'>
           {experiencesData.map((position, index) => (
-            <PositionDetail key={index} {...position} />
+            <PositionDetail key={index} {...position} index={index} />
           ))}
         </ul>
       </div>

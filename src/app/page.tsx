@@ -13,11 +13,11 @@ const Home = () => {
       <SectionDivider />
       <About />
       <SectionDivider />
-      <Skills />
-      <SectionDivider />
       <Experience />
       <SectionDivider />
       <Projects />
+      <SectionDivider />
+      <Skills />
       <SectionDivider />
       <Contact />
     </main>

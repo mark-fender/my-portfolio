@@ -11,11 +11,9 @@ const Projects = () => {
   return (
     <section ref={ref} id='projects' className='scroll-mt-36'>
       <SectionHeading>My Projects</SectionHeading>
-      <div>
         {projectsData.map((project, index) => (
           <Project key={index} {...project} />
         ))}
-      </div>
     </section>
   );
 };

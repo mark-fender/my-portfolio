@@ -1,9 +1,4 @@
-import React from 'react';
-import { CgWorkAlt } from 'react-icons/cg';
-import { FaReact } from 'react-icons/fa';
-import { LuGraduationCap } from 'react-icons/lu';
-
-export const links = [
+export const navBarLinks = [
   {
     name: 'Home',
     hash: '#home',
@@ -11,10 +6,6 @@ export const links = [
   {
     name: 'About',
     hash: '#about',
-  },
-  {
-    name: 'Projects',
-    hash: '#projects',
   },
   {
     name: 'Skills',
@@ -25,6 +16,10 @@ export const links = [
     hash: '#experience',
   },
   {
+    name: 'Projects',
+    hash: '#projects',
+  },
+  {
     name: 'Contact',
     hash: '#contact',
   },
@@ -32,70 +27,92 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: 'Graduated bootcamp',
-    location: 'Miami, FL',
+    title: 'Front-End Developer',
+    company: 'Indra Avitech',
     description:
-      'I graduated after 6 months of studying. I immediately found a job as a front-end developer.',
-    icon: React.createElement(LuGraduationCap),
-    date: '2019',
+      'Part of a development team responsible for development and testing of frontend of applications used by employees in aviation sector.',
+    date: 'May 2023 - present',
   },
   {
     title: 'Front-End Developer',
-    location: 'Orlando, FL',
+    company: ' Global Logic',
     description:
-      'I worked as a front-end developer for 2 years in 1 job and 1 year in another job. I also upskilled to the full stack.',
-    icon: React.createElement(CgWorkAlt),
-    date: '2019 - 2021',
+      'Lead the development of user interface for controlling sample registration module that processes samples of patients tissue in medical environment.',
+    date: 'November 2022 - April 2023',
   },
   {
-    title: 'Full-Stack Developer',
-    location: 'Houston, TX',
+    title: 'Front-End Developer',
+    company: 'Workflows',
     description:
-      "I'm now a full-stack developer working as a freelancer. My stack includes React, Next.js, TypeScript, Tailwind, Prisma and MongoDB. I'm open to full-time opportunities.",
-    icon: React.createElement(FaReact),
-    date: '2021 - present',
+      'Development, testing and maintenance of frontend projects, mostly for Austrian client NTS Retail. Built several projects from scratch and helped to refactor and improve code quality in legacy codebase.',
+    date: 'September 2018 - October 2022',
+  },
+  {
+    title: 'Software Engineer',
+    company: 'Software AG',
+    description:
+      'Testing software features using JUnit and Selenium and development of internal tools. Managed to optimize stability and execution times of existing test suites.',
+    date: 'September 2017 - September 2018',
   },
 ] as const;
 
 export const projectsData = [
   {
-    title: 'CorpComment',
+    title: 'AIXM Editor & Digital NOTAM management',
     description:
-      'I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.',
-    tags: ['React', 'Next.js', 'MongoDB', 'Tailwind', 'Prisma'],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.',
+    tags: [
+      'ReactJS',
+      'TypeScript',
+      'SCSS',
+      'Jest',
+      'React Query',
+      'Ant Design',
+      'Jenkins',
+      'BitBucket',
+      'REST API',
+    ],
   },
   {
-    title: 'rmtDev',
+    title: 'Inveox SampleX',
     description:
-      'Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.',
-    tags: ['React', 'TypeScript', 'Next.js', 'Tailwind', 'Redux'],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.',
+    tags: ['ReactJS', 'TypeScript', 'Emotion', 'GitHub', 'WebSocket', 'REST API', 'Docker'],
   },
   {
-    title: 'Word Analytics',
+    title: 'NTS Retail POS & Welcome Manager',
     description:
-      'A public web app for quick analytics on text. It shows word count, character count and social media post limits.',
-    tags: ['React', 'Next.js', 'SQL', 'Tailwind', 'Framer'],
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.',
+    tags: [
+      'Angular',
+      'TypeScript',
+      'SCSS',
+      'RxJS',
+      'NgRx',
+      'Jenkins',
+      'Gitlab',
+      'WebSocket',
+      'REST API',
+      'Docker',
+    ],
   },
 ] as const;
 
 export const skillsData = [
-  'HTML',
-  'CSS',
+  'HTML5',
+  'CSS3',
   'JavaScript',
   'TypeScript',
-  'React',
-  'Next.js',
-  'Node.js',
+  'ReactJS',
+  'Angular',
+  'Jest',
+  'React Query',
   'Git',
   'Tailwind',
-  'Prisma',
-  'MongoDB',
-  'Redux',
-  'GraphQL',
-  'Apollo',
-  'Express',
-  'PostgreSQL',
-  'Python',
-  'Django',
-  'Framer Motion',
+  'Emotion',
+  'Styled Components',
+  'RxJs',
+  'REST API',
+  'WebSocket',
+  'Docker',
 ] as const;

@@ -10,7 +10,7 @@ import { motion, useScroll } from 'framer-motion';
 const Experience = () => {
   const { ref: sectionRef } = useSectionInView({ sectionName: 'Experience' });
   const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({ target: ref, offset: ['start end', 'end'] });
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['0 1', '1.33 1'] });
 
   return (
     <section ref={sectionRef} id='experience'>
@@ -18,7 +18,7 @@ const Experience = () => {
       <div ref={ref} className='relative w-[75%] mx-auto'>
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className='absolute left-2 top-0 w-1 h-full bg-gray-600 rounded-full'
+          className='absolute left-2 top-0 w-1 h-full bg-slate-500 rounded-full'
         />
         <ul className='ml-16'>
           {experiencesData.map((position, index) => (

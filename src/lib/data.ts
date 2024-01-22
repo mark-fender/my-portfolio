@@ -8,16 +8,16 @@ export const navBarLinks = [
     hash: '#about',
   },
   {
+    name: 'Skills',
+    hash: '#skills',
+  },
+  {
     name: 'Experience',
     hash: '#experience',
   },
   {
     name: 'Projects',
     hash: '#projects',
-  },
-  {
-    name: 'Skills',
-    hash: '#skills',
   },
   {
     name: 'Contact',

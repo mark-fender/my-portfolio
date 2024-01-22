@@ -26,7 +26,7 @@ const Intro = () => {
             alt={'marek-lipcak-portrait'}
             width={256}
             height={256}
-            quality='95'
+            quality='90'
             priority={true}
             className='rounded-full border-[0.25rem] border-white shadow-xl'
           />
@@ -49,27 +49,31 @@ const Intro = () => {
         transition={{ delay: 0.15, duration: 0.35 }}>
         <Link
           href='#contact'
-          className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-102 transition group'>
+          className='bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none
+          focus:scale-105 hover:scale-105 hover:bg-gray-950 active:scale-102 transition group'>
           Contact me <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' />
         </Link>
         <a
           href='/CV.pdf'
           onClick={() => setLastClickTime(Date.now())}
           download
-          className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack'>
+          className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
+          focus:scale-105 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack dark:bg-white/10'>
           Download CV <HiDownload className='opacity-70 group-hover:translate-y-1 transition' />
         </a>
         <div className='flex flex-row gap-2'>
           <a
             href='https://linkedin.com/in/marek-lipčák'
             target='_blank'
-            className='bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full focus:scale-105 hover:text-gray-950 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack'>
+            className='bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full dark:text-white/60 dark:bg-white/10
+            focus:scale-105 hover:text-gray-950 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack'>
             <BsLinkedin />
           </a>
           <a
             href='https://github.com/mark-fender'
             target='_blank'
-            className='bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full focus:scale-105 hover:text-gray-950 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack'>
+            className='bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full dark:text-white/60 dark:bg-white/10
+            focus:scale-105 hover:text-gray-950 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack'>
             <BsGithub />
           </a>
         </div>

@@ -15,27 +15,25 @@ type ContactFormEmailProps = {
   senderEmail: string;
 };
 
-const ContactFormEmail = ({ message, senderEmail }: ContactFormEmailProps) => {
-  return (
-    <Html>
-      <Head>
-        <Tailwind>
-          <Body className='bg-slate-200 text-black'>
-            <Container>
-              <Section className='bg-white borderBlack my-10 px-10 rounded-md'>
-                <Heading className='leading-tight'>
-                  You received this message from contact form in your portfolio.
-                </Heading>
-                <Text>{message}</Text>
-                <Hr />
-                <Text>From: {senderEmail}</Text>
-              </Section>
-            </Container>
-          </Body>
-        </Tailwind>
-      </Head>
-    </Html>
-  );
-};
+const ContactFormEmail = ({ message, senderEmail }: ContactFormEmailProps) => (
+  <Html>
+    <Head>
+      <Tailwind>
+        <Body className='bg-slate-200 text-black'>
+          <Container>
+            <Section className='bg-white borderBlack my-10 px-10 rounded-md'>
+              <Heading className='leading-tight'>
+                You received this message from contact form in your portfolio.
+              </Heading>
+              <Text>{message}</Text>
+              <Hr />
+              <Text>From: {senderEmail}</Text>
+            </Section>
+          </Container>
+        </Body>
+      </Tailwind>
+    </Head>
+  </Html>
+);
 
 export default ContactFormEmail;

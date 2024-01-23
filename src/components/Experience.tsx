@@ -18,9 +18,9 @@ const Experience = () => {
       <div ref={ref} className='relative w-[75%] mx-auto'>
         <motion.div
           style={{ scaleY: scrollYProgress }}
-          className='absolute left-2 top-0 w-1 h-full bg-slate-500 rounded-full'
+          className='absolute left-2 top-0 w-1 h-full bg-slate-500 rounded-full hidden sm:block'
         />
-        <ul className='ml-16'>
+        <ul className='sm:ml-16 overflow-hidden'>
           {experiencesData.map((position, index) => (
             <PositionDetail key={index} {...position} index={index} />
           ))}

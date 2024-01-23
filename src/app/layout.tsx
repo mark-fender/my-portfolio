@@ -11,7 +11,7 @@ import Providers from './providers';
 const satoshi = localFont({
   src: [
     {
-      path: './fonts/Satoshi-Medium.ttf',
+      path: './fonts/Satoshi-Regular.ttf',
       weight: '400',
       style: 'normal',
     },

@@ -5,7 +5,9 @@ import SectionHeading from './SectionHeading';
 import { motion } from 'framer-motion';
 import { sendEmail } from '../actions/sendEmail';
 import SubmitButton from './SubmitButton';
+import { MdCheck, MdClose } from 'react-icons/md';
 import toast from 'react-hot-toast';
+import { ReactNode } from 'react';
 
 const Contact = () => {
   const { ref } = useSectionInView({ sectionName: 'Contact' });
@@ -13,10 +15,10 @@ const Contact = () => {
   const handleFormSubmitAction = async (formData: FormData) => {
     const { data, error } = await sendEmail(formData);
     if (error) {
-      toast.error(error);
+      popToast(error, <MdClose />);
     }
     if (data) {
-      toast.success('E-mail sent successfully!');
+      popToast('E-mail sent successfully!', <MdCheck />);
     }
   };
 
@@ -57,6 +59,24 @@ const Contact = () => {
       </form>
     </motion.section>
   );
+};
+
+const popToast = (message: string, icon: ReactNode) => {
+  toast.custom((t) => (
+    <div
+      className={`${
+        t.visible ? 'animate-enter' : 'animate-leave'
+      } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex text-gray-900 dark:bg-gray-900 dark:text-gray-50`}>
+      <div className='flex-1 w-0 p-4'>
+        <div className='flex items-start'>
+          {icon}
+          <div className='ml-3 flex-1'>
+            <p className='text-sm font-medium'>{message}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  ));
 };
 
 export default Contact;

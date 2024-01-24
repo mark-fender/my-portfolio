@@ -6,7 +6,8 @@ import { projectsData } from '../lib/data';
 import useSectionInView from '../hooks/useSectionInView';
 
 const Projects = () => {
-  const { ref } = useSectionInView({ sectionName: 'Projects', threshold: 0.5 });
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const { ref } = useSectionInView({ sectionName: 'Projects', threshold: isMobile ? 0.3 : 0.9 });
 
   return (
     <section ref={ref} id='projects' className='scroll-mt-36'>

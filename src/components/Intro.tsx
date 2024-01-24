@@ -26,9 +26,9 @@ const Intro = () => {
             alt={'marek-lipcak-portrait'}
             width={256}
             height={256}
-            quality='90'
+            quality='95'
             priority={true}
-            className='rounded-full border-[0.25rem] border-white shadow-xl'
+            className='rounded-full border-[0.15rem] border-gray-200 shadow-xl'
           />
         </motion.div>
       </div>

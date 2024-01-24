@@ -20,7 +20,8 @@ const fadeInAnimationVariants = {
 };
 
 const Skills = () => {
-  const { ref } = useSectionInView({ sectionName: 'Skills' });
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const { ref } = useSectionInView({ sectionName: 'Skills', threshold: isMobile ? 0.5 : 0.9 });
 
   return (
     <section ref={ref} className='max-w-[53rem] scroll-mt-36 text-center' id='skills'>

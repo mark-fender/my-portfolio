@@ -5,7 +5,8 @@ import SectionHeading from './SectionHeading';
 import useSectionInView from '../hooks/useSectionInView';
 
 const About = () => {
-  const { ref } = useSectionInView({ sectionName: 'About' });
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const { ref } = useSectionInView({ sectionName: 'About', threshold: isMobile ? 0.25 : 0.75 });
 
   return (
     <motion.section

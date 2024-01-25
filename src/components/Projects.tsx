@@ -7,7 +7,7 @@ import useSectionInView from '../hooks/useSectionInView';
 
 const Projects = () => {
   const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-  const { ref } = useSectionInView({ sectionName: 'Projects', threshold: isMobile ? 0.3 : 0.9 });
+  const { ref } = useSectionInView({ sectionName: 'Projects', threshold: isMobile ? 0.2 : 0.9 });
 
   return (
     <section ref={ref} id='projects' className='scroll-mt-36'>

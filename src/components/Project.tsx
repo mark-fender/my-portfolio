@@ -26,7 +26,7 @@ const Project = ({ title, description, tags }: ProjectProps) => {
         opacity: opacityProgress,
       }}>
       <section
-        className='flex flex-col justify-between bg-slate-300 max-w-[50rem] 
+        className='flex flex-col justify-between bg-slate-300 max-w-[50rem] hover:scale-105 transition
       sm:h-[25rem] max-h-fit mb-8 borderBlack p-8 rounded-lg shadow-lg shadow-black/[0.10] dark:bg-opacity-10'>
         <div>
           <h3 className='text-2xl font-semibold'>{title}</h3>

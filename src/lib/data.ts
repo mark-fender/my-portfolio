@@ -30,7 +30,7 @@ export const experiencesData = [
     title: 'Front-End Developer',
     company: 'Indra Avitech',
     description:
-      'Part of a development team responsible for development and testing of frontend of applications used by employees in aviation sector.',
+      'Part of a development team responsible for development and testing of frontend of applications used by employees in aviation sector. Greatly contributed to improving visual design and usability of developed products and increasing test coverage of the codebase.',
     date: 'May 2023 - present',
   },
   {
@@ -60,14 +60,16 @@ export const projectsData = [
   {
     title: 'AIXM Editor & Digital NOTAM management',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.',
+      'Applications used in aviation sector to encode messages containing operationally relevant updates exchanged between systems according to specific set of rules also known as digital NOTAMs. Digital NOTAM data can be used to provide information on temporary changes affecting flight operations such as work in progress areas, closed taxiways/runways, new obstacles such as cranes and more. Also displaying these changes on the map and editing them either via forms or real time map editing.',
     tags: [
       'ReactJS',
       'TypeScript',
       'SCSS',
+      'Ant Design',
       'Jest',
       'React Query',
-      'Ant Design',
+      'React Hook Form',
+      'Zod',
       'Jenkins',
       'BitBucket',
       'REST API',
@@ -76,13 +78,22 @@ export const projectsData = [
   {
     title: 'Inveox SampleX',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.',
-    tags: ['ReactJS', 'TypeScript', 'Emotion', 'GitHub', 'WebSocket', 'REST API', 'Docker'],
+      "User interface for a machine intended to be used in hospitals with built in user authentication with PIN code and admin user management. Provides functionality to manage and monitor the processing containers housing patients' tissue samples being analysed for detecting cancer cells.",
+    tags: [
+      'ReactJS',
+      'TypeScript',
+      'Emotion',
+      'React Hook Form',
+      'GitHub',
+      'WebSocket',
+      'REST API',
+      'Docker',
+    ],
   },
   {
     title: 'NTS Retail POS & Welcome Manager',
     description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit.',
+      "Applications enabling the retail staff to manage cash flow of the store, adding products to cart and processing payments, calculating daily turnover and employee shift management for supervisors. Also managing the queues of incoming customers, assigning consultants for them and sending automatic notifications, alerting customers when it's their turn in line.",
     tags: [
       'Angular',
       'TypeScript',

@@ -7,6 +7,8 @@ import Footer from '../components/Footer';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 import { Toaster } from 'react-hot-toast';
 import Providers from './providers';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const satoshi = localFont({
   src: [
@@ -66,6 +68,8 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
             <ThemeSwitcher />
           </ActiveSectionContextProvider>
         </Providers>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

@@ -8,6 +8,7 @@ import SubmitButton from './SubmitButton';
 import { MdCheck, MdClose } from 'react-icons/md';
 import toast from 'react-hot-toast';
 import { ReactNode } from 'react';
+import clsx from 'clsx';
 
 const Contact = () => {
   const { ref } = useSectionInView({ sectionName: 'Contact' });
@@ -64,9 +65,13 @@ const Contact = () => {
 const popToast = (message: string, icon: ReactNode) => {
   toast.custom((t) => (
     <div
-      className={`${
-        t.visible ? 'animate-enter' : 'animate-leave'
-      } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex text-gray-900 dark:bg-gray-900 dark:text-gray-50`}>
+      className={clsx(
+        'max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex text-gray-900 dark:bg-gray-900 dark:text-gray-50',
+        {
+          'animate-enter': t.visible,
+          'animate-leave': !t.visible,
+        },
+      )}>
       <div className='flex-1 w-0 p-4'>
         <div className='flex items-start'>
           {icon}

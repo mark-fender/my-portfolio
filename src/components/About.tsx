@@ -3,9 +3,10 @@
 import { motion } from 'framer-motion';
 import SectionHeading from './SectionHeading';
 import useSectionInView from '../hooks/useSectionInView';
+import useIsMobile from '../hooks/useIsMobile';
 
 const About = () => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const { isMobile } = useIsMobile();
   const { ref } = useSectionInView({ sectionName: 'About', threshold: isMobile ? 0.25 : 0.75 });
 
   return (

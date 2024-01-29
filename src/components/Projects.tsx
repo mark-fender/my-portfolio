@@ -4,9 +4,10 @@ import SectionHeading from './SectionHeading';
 import Project from './Project';
 import { projectsData } from '../lib/data';
 import useSectionInView from '../hooks/useSectionInView';
+import useIsMobile from '../hooks/useIsMobile';
 
 const Projects = () => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const { isMobile } = useIsMobile(); 
   const { ref } = useSectionInView({ sectionName: 'Projects', threshold: isMobile ? 0.2 : 0.5 });
 
   return (

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import useSectionInView from '../hooks/useSectionInView';
 import { skillsData } from '../lib/data';
 import SectionHeading from './SectionHeading';
+import useIsMobile from '../hooks/useIsMobile';
 
 const fadeInAnimationVariants = {
   initial: {
@@ -20,7 +21,7 @@ const fadeInAnimationVariants = {
 };
 
 const Skills = () => {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
+  const { isMobile } = useIsMobile();
   const { ref } = useSectionInView({ sectionName: 'Skills', threshold: isMobile ? 0.5 : 0.9 });
 
   return (

@@ -6,13 +6,14 @@ import useSectionInView from '../hooks/useSectionInView';
 import { experiencesData } from '../lib/data';
 import PositionDetail from './PositionDetail';
 import { motion, useScroll } from 'framer-motion';
+import useIsMobile from '../hooks/useIsMobile';
 
 const Experience = () => {
-    const isMobile = typeof window !== 'undefined' && window.innerWidth < 640;
-    const { ref: sectionRef } = useSectionInView({
-      sectionName: 'Experience',
-      threshold: isMobile ? 0.3 : 0.9,
-    });
+  const { isMobile } = useIsMobile();
+  const { ref: sectionRef } = useSectionInView({
+    sectionName: 'Experience',
+    threshold: isMobile ? 0.3 : 0.9,
+  });
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: ref, offset: ['0 1', '1.33 1'] });
 

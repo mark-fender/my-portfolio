@@ -13,7 +13,8 @@ const useSectionInView = ({ sectionName, threshold = 0.75 }: UseSectionInViewPro
   const { setActiveSection, lastClickTime } = useActiveSection();
 
   useEffect(() => {
-    if (inView && Date.now() - lastClickTime > 1000) {
+    const isRecentClick = Date.now() - lastClickTime > 1000;
+    if (inView && isRecentClick) {
       setActiveSection(sectionName);
     }
   }, [inView, lastClickTime, sectionName, setActiveSection]);

@@ -6,7 +6,8 @@ import { motion } from 'framer-motion';
 import { sendEmail } from '../actions/sendEmail';
 import SubmitButton from './SubmitButton';
 import { MdCheck, MdClose } from 'react-icons/md';
-import { popToast } from '../utils/toast';
+import clsx from 'clsx';
+import toast from 'react-hot-toast';
 
 const Contact = () => {
   const { ref } = useSectionInView({ sectionName: 'Contact' });
@@ -19,6 +20,28 @@ const Contact = () => {
     if (data) {
       popToast('E-mail sent successfully!', <MdCheck />);
     }
+  };
+
+  const popToast = (message: string, icon: JSX.Element) => {
+    toast.custom((t) => (
+      <div
+        className={clsx(
+          'max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex text-gray-900 dark:bg-gray-900 dark:text-gray-50',
+          {
+            'animate-enter': t.visible,
+            'animate-leave': !t.visible,
+          },
+        )}>
+        <div className='flex-1 w-0 p-4'>
+          <div className='flex items-start'>
+            {icon}
+            <div className='ml-3 flex-1'>
+              <p className='text-sm font-medium'>{message}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    ));
   };
 
   return (

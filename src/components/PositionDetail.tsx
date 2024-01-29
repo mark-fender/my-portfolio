@@ -22,15 +22,16 @@ const PositionDetail = ({ title, company, description, date, index }: PositionDe
   <motion.li
     className='mb-16 last:mb-0 w-full mx-auto flex flex-col items-left justify-between'
     variants={fadeInAnimationVariants}
-    initial={'initial'}
+    initial='initial'
     whileInView='animate'
     viewport={{ once: true }}
-    custom={index}>
+    custom={index}
+  >
     <h3 className='font-bold text-size-3xl'>
       {title} at {company}
     </h3>
     <span className='font-medium my-2 text-gray-950/55 dark:text-white/55'>{date}</span>
-    <p className='w-full'> {description}</p>
+    <p className='w-full'>{description}</p>
   </motion.li>
 );
 

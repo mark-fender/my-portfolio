@@ -38,8 +38,7 @@ export const metadata = {
 const RootLayout = ({ children }: { children: ReactNode }) => {
   return (
     <html lang='en' className='!scroll-smooth' suppressHydrationWarning>
-      <body
-        className={`${satoshi.className}  bg-slate-200 text-gray-950 relative pt-28 sm:pt-36 
+      <body className={`${satoshi.className}  bg-slate-200 text-gray-950 relative pt-28 sm:pt-36 
       dark:bg-slate-900 dark:text-gray-50 dark:text-opacity-90`}>
         <div
           className='bg-[#a6afec] absolute top-[-6rem] -z-10 right-[11rem] 2xl:right-[25rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[15rem] 
@@ -49,7 +48,6 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
           className='bg-[#9fddf4] absolute top-[-1rem] -z-10 left-[-50rem] h-[31.25rem] w-[50rem] rounded-full blur-[15rem] 
           sm:w-[68.75rem] sm:left-[-60rem] md:left-[-50rem] lg:left-[-35rem] xl:left-[-25rem] 2xl:left-[-5rem] dark:bg-[#70a3b6]'
         />
-
         <div
           className='bg-[#a6afec] absolute bottom-[-2rem] -z-10 right-[11rem] 2xl:right-[25rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[15rem] 
           sm:w-[68.75rem] dark:bg-[#5b639e]'
@@ -63,7 +61,6 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
             <Header />
             {children}
             <Footer />
-
             <Toaster position='top-right' />
             <ThemeSwitcher />
           </ActiveSectionContextProvider>

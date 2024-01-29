@@ -17,8 +17,7 @@ const ActiveSectionContextProvider = ({ children }: { children: ReactNode }) => 
   const [lastClickTime, setLastClickTime] = useState<number>(0);
 
   return (
-    <ActiveSectionContext.Provider
-      value={{ activeSection, setActiveSection, lastClickTime, setLastClickTime }}>
+    <ActiveSectionContext.Provider value={{ activeSection, setActiveSection, lastClickTime, setLastClickTime }}>
       {children}
     </ActiveSectionContext.Provider>
   );

@@ -1,3 +1,6 @@
 export const validateString = (value: unknown, maxLength: number) => {
-  return value && typeof value === 'string' && value.length <= maxLength;
+  if (!value || typeof value !== 'string') {
+    return false;
+  }
+  return value.length <= maxLength;
 };

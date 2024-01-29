@@ -23,7 +23,7 @@ const Intro = () => {
           transition={{ type: 'tween', duration: 0.5 }}>
           <Image
             src={photo}
-            alt={'marek-lipcak-portrait'}
+            alt='marek-lipcak-portrait'
             width={256}
             height={256}
             quality='95'
@@ -36,9 +36,9 @@ const Intro = () => {
         className='mb-10 mt-16 px-4 text-xl font- !leading-[1.5] sm:text-2xl'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}>
-        <span className='font-bold'>Hi, my name is Marek.</span> I am an experienced
-        <span className='font-bold'> frontend developer</span> with
-        <span className='font-bold'> 6 years</span> of professional experience in web development. I
+        <span className='font-bold'>Hi, my name is Marek.</span> I am an experienced{' '}
+        <span className='font-bold'>frontend developer</span> with{' '}
+        <span className='font-bold'>6 years</span> of professional experience in web development. I
         am passionate about building responsive user interfaces with performance and attention to
         detail in mind. My main focus is on <span className='font-bold'>ReactJS</span>.
       </motion.h1>

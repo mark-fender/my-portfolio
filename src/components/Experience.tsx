@@ -1,12 +1,12 @@
 'use client';
 
 import React, { useRef } from 'react';
-import SectionHeading from './SectionHeading';
-import useSectionInView from '../hooks/useSectionInView';
-import { experiencesData } from '../lib/data';
-import PositionDetail from './PositionDetail';
+import SectionHeading from '@/components/SectionHeading';
+import useSectionInView from '@/hooks/useSectionInView';
+import { experiencesData } from '@/lib/data';
+import PositionDetail from '@/components/PositionDetail';
 import { motion, useScroll } from 'framer-motion';
-import useIsMobile from '../hooks/useIsMobile';
+import useIsMobile from '@/hooks/useIsMobile';
 
 const Experience = () => {
   const { isMobile } = useIsMobile();

@@ -1,10 +1,10 @@
 'use client';
 
-import SectionHeading from './SectionHeading';
-import Project from './Project';
-import { projectsData } from '../lib/data';
-import useSectionInView from '../hooks/useSectionInView';
-import useIsMobile from '../hooks/useIsMobile';
+import SectionHeading from '@/components/SectionHeading';
+import Project from '@/components/Project';
+import { projectsData } from '@/lib/data';
+import useSectionInView from '@/hooks/useSectionInView';
+import useIsMobile from '@/hooks/useIsMobile';
 
 const Projects = () => {
   const { isMobile } = useIsMobile(); 

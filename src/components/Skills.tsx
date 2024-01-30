@@ -1,10 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import useSectionInView from '../hooks/useSectionInView';
-import { skillsData } from '../lib/data';
-import SectionHeading from './SectionHeading';
-import useIsMobile from '../hooks/useIsMobile';
+import useSectionInView from '@/hooks/useSectionInView';
+import { skillsData } from '@/lib/data';
+import SectionHeading from '@/components/SectionHeading';
+import useIsMobile from '@/hooks/useIsMobile';
 
 const fadeInAnimationVariants = {
   initial: {

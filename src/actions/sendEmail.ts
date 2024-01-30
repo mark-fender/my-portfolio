@@ -1,9 +1,9 @@
 'use server';
 
 import { Resend } from 'resend';
-import { getErrorMessage } from '../utils/errorHandling';
-import { validateString } from '../utils/validation';
-import ContactFormEmail from '../components/ContactFormEmail';
+import { getErrorMessage } from '@/utils/errorHandling';
+import { validateString } from '@/utils/validation';
+import ContactFormEmail from '@/components/ContactFormEmail';
 import { createElement } from 'react';
 
 const resend = new Resend(process.env.RESEND_API_KEY);

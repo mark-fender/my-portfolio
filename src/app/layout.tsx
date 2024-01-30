@@ -1,12 +1,12 @@
 import localFont from 'next/font/local';
 import { ReactNode } from 'react';
-import './globals.css';
-import ActiveSectionContextProvider from '../context/activeSectionContext';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
-import ThemeSwitcher from '../components/ThemeSwitcher';
+import '@/app/globals.css';
+import ActiveSectionContextProvider from '@/context/activeSectionContext';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
 import { Toaster } from 'react-hot-toast';
-import Providers from './providers';
+import Providers from '@/app/providers';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 

@@ -1,13 +1,13 @@
 'use client';
 
 import Image from 'next/image';
-import photo from '../../public/assets/photo.jpeg';
+import photo from '/public/assets/photo.jpeg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
-import useSectionInView from '../hooks/useSectionInView';
-import useActiveSection from '../hooks/useActiveSection';
+import useSectionInView from '@/hooks/useSectionInView';
+import useActiveSection from '@/hooks/useActiveSection';
 
 const Intro = () => {
   const { ref } = useSectionInView({ sectionName: 'Home' });

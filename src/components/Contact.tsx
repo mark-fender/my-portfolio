@@ -1,10 +1,10 @@
 'use client';
 
-import useSectionInView from '../hooks/useSectionInView';
-import SectionHeading from './SectionHeading';
+import useSectionInView from '@/hooks/useSectionInView';
+import SectionHeading from '@/components/SectionHeading';
 import { motion } from 'framer-motion';
-import { sendEmail } from '../actions/sendEmail';
-import SubmitButton from './SubmitButton';
+import { sendEmail } from '@/actions/sendEmail';
+import SubmitButton from '@/components/SubmitButton';
 import { MdCheck, MdClose } from 'react-icons/md';
 import clsx from 'clsx';
 import toast from 'react-hot-toast';

@@ -1,9 +1,9 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import SectionHeading from './SectionHeading';
-import useSectionInView from '../hooks/useSectionInView';
-import useIsMobile from '../hooks/useIsMobile';
+import SectionHeading from '@/components/SectionHeading';
+import useSectionInView from '@/hooks/useSectionInView';
+import useIsMobile from '@/hooks/useIsMobile';
 
 const About = () => {
   const { isMobile } = useIsMobile();

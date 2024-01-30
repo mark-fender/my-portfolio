@@ -3,8 +3,8 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import clsx from 'clsx';
-import { navBarLinks } from '../lib/data';
-import useActiveSection from '../hooks/useActiveSection';
+import { navBarLinks } from '@/lib/data';
+import useActiveSection from '@/hooks/useActiveSection';
 
 const Header = () => {
   const { activeSection, setActiveSection, setLastClickTime } = useActiveSection();

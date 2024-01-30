@@ -1,7 +1,7 @@
 'use client';
 
 import { Dispatch, ReactNode, SetStateAction, createContext, useState } from 'react';
-import { SectionName } from '../types';
+import { SectionName } from '@/types';
 
 type ActiveSection = {
   activeSection: SectionName;

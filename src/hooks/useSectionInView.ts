@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
-import useActiveSection from './useActiveSection';
+import useActiveSection from '@/hooks/useActiveSection';
 import { useInView } from 'react-intersection-observer';
-import { SectionName } from '../types';
+import { SectionName } from '@/types';
 
 type UseSectionInViewProps = {
   sectionName: SectionName;

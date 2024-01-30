@@ -1,6 +1,6 @@
 'use client';
 
-import { projectsData } from '../lib/data';
+import { projectsData } from '@/lib/data';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { experiencesData } from '../lib/data';
+import { experiencesData } from '@/lib/data';
 
 const fadeInAnimationVariants = {
   initial: {

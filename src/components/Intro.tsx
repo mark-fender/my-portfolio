@@ -8,9 +8,11 @@ import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 import useSectionInView from '@/hooks/useSectionInView';
 import useActiveSection from '@/hooks/useActiveSection';
+import useIsMobile from '@/hooks/useIsMobile';
 
 const Intro = () => {
-  const { ref } = useSectionInView({ sectionName: 'Home' });
+  const { isMobile } = useIsMobile();
+  const { ref } = useSectionInView({ sectionName: 'Home', threshold: isMobile ? 0.25 : 0.75 });
   const { setLastClickTime } = useActiveSection();
 
   return (

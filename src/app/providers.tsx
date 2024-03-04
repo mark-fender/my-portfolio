@@ -1,13 +1,16 @@
 'use client';
 
+import ActiveSectionContextProvider from '@/context/activeSectionContext';
 import { ThemeProvider } from 'next-themes';
 import { ReactNode } from 'react';
 
 const Providers = ({ children }: { children: ReactNode }) => {
   return (
-    <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
-      {children}
-    </ThemeProvider>
+    <ActiveSectionContextProvider>
+      <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
+        {children}
+      </ThemeProvider>
+    </ActiveSectionContextProvider>
   );
 };
 

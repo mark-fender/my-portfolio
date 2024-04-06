@@ -58,6 +58,39 @@ export const experiencesData = [
 
 export const projectsData = [
   {
+    title: 'Imaginify',
+    description: (
+      <>
+        An online SaaS platform enabling users to edit photos using AI. It is possible to restore
+        images in poor quality, generative fill image surroundings,remove or recolor objects or
+        remove image background. Each edit costs one credit and credits can be purchased via Stripe
+        payment gateway. Each user can view their edited images in their profile and all of the
+        edits in homepage. Used for learning and based on design and resources provided by{' '}
+        <a style={{ textDecoration: 'underline' }} href='https://www.jsmastery.pro/'>
+          Javascript Mastery
+        </a>
+        . Live preview available{' '}
+        <a style={{ textDecoration: 'underline' }} href='https://imaginify-amber-omega.vercel.app/'>
+          here
+        </a>
+        .
+      </>
+    ),
+    tags: [
+      'ReactJS',
+      'NextJS',
+      'TypeScript',
+      'Tailwind',
+      'Shadcn UI',
+      'React Hook Form',
+      'Zod',
+      'Cloudinary AI',
+      'Clerk Auth',
+      'Stripe',
+      'MongoDB',
+    ],
+  },
+  {
     title: 'AIXM Editor & Digital NOTAM management',
     description:
       'Applications used in aviation sector to encode messages containing operationally relevant updates exchanged between systems according to specific set of rules also known as digital NOTAMs. Digital NOTAM data can be used to provide information on temporary changes affecting flight operations such as work in progress areas, closed taxiways/runways, new obstacles such as cranes and more. Also displaying these changes on the map and editing them either via forms or real time map editing.',

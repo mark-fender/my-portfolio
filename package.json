@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@react-email/components": "^0.0.16",
-    "@react-email/tailwind": "^0.0.14",
+    "@react-email/tailwind": "^0.0.15",
     "@types/node": "20.12.5",
     "@types/react": "18.2.62",
     "@types/react-dom": "18.2.21",

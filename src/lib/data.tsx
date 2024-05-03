@@ -66,11 +66,17 @@ export const projectsData = [
         remove image background. Each edit costs one credit and credits can be purchased via Stripe
         payment gateway. Each user can view their edited images in their profile and all of the
         edits in homepage. Used for learning and based on design and resources provided by{' '}
-        <a style={{ textDecoration: 'underline' }} href='https://www.jsmastery.pro/'>
+        <a
+          style={{ textDecoration: 'underline' }}
+          href='https://www.jsmastery.pro/'
+          target='_blank'>
           Javascript Mastery
         </a>
         . Live preview available{' '}
-        <a style={{ textDecoration: 'underline' }} href='https://imaginify-amber-omega.vercel.app/'>
+        <a
+          style={{ textDecoration: 'underline' }}
+          href='https://imaginify-amber-omega.vercel.app/'
+          target='_blank'>
           here
         </a>
         .

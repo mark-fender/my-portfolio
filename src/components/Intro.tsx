@@ -5,15 +5,13 @@ import photo from '/public/assets/photo.jpeg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
-import { HiDownload } from 'react-icons/hi';
 import useSectionInView from '@/hooks/useSectionInView';
-import useActiveSection from '@/hooks/useActiveSection';
 import useIsMobile from '@/hooks/useIsMobile';
 
 const Intro = () => {
   const { isMobile } = useIsMobile();
   const { ref } = useSectionInView({ sectionName: 'Home', threshold: isMobile ? 0.25 : 0.75 });
-  const { setLastClickTime } = useActiveSection();
+  // const { setLastClickTime } = useActiveSection();
 
   return (
     <section ref={ref} className='mt-8 max-w-[75rem] text-center sm:mb-0 scroll-mt-36' id='home'>
@@ -55,14 +53,14 @@ const Intro = () => {
           focus:scale-105 hover:scale-105 hover:bg-gray-950 dark:bg-gray-950 active:scale-102 transition group'>
           Contact me <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' />
         </Link>
-        <a
+        {/* <a
           href='/CV.pdf'
           onClick={() => setLastClickTime(Date.now())}
           download
           className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
           focus:scale-105 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack dark:bg-white/10'>
           Download CV <HiDownload className='opacity-70 group-hover:translate-y-1 transition' />
-        </a>
+        </a> */}
         <div className='flex flex-row gap-2'>
           <a
             href='https://linkedin.com/in/marek-lipčák'

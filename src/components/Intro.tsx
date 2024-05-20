@@ -40,7 +40,8 @@ const Intro = () => {
         <span className='font-bold'>frontend developer</span> with{' '}
         <span className='font-bold'>6 years</span> of professional experience in web development. I
         am passionate about building responsive user interfaces with performance and attention to
-        detail in mind. My main focus is on <span className='font-bold'>ReactJS</span>.
+        detail in mind. My main focus is on <span className='font-bold'>ReactJS</span> &{' '}
+        <span className='font-bold'>NextJS</span>.
       </motion.h1>
       <motion.div
         className='mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 px-4 tex-lg font-medium'

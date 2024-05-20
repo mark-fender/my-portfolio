@@ -29,10 +29,9 @@ const About = () => {
         perfect blend of logical problem solving and unleashing creativity for stunning designs. I
         thrive on creating software that not only works seamlessly but also looks and feels
         fantastic. My go-to stack includes
-        <span className='font-medium'> ReactJS, Angular, & TypeScript</span>, and I&apos;m currently
-        exploring more of other frameworks like <span className='font-medium'>NextJS</span>. Always
-        eager to learn, I stay updated with the latest technologies to bring innovative solutions to
-        the table.
+        <span className='font-medium'> ReactJS, NextJS, Angular, & TypeScript</span>. Always eager
+        to learn, I stay updated with the latest technologies to bring innovative solutions to the
+        table.
       </p>
 
       <p>

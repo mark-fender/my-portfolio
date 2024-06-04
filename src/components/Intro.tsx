@@ -4,7 +4,7 @@ import Image from 'next/image';
 import photo from '/public/assets/photo.jpeg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { BsArrowRight, BsGithub, BsLinkedin } from 'react-icons/bs';
+import { BsArrowRight, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import useSectionInView from '@/hooks/useSectionInView';
 import useIsMobile from '@/hooks/useIsMobile';
 
@@ -20,7 +20,7 @@ const Intro = () => {
           className='mb-8'
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ type: 'tween', duration: 0.5 }}>
+          transition={{ type: 'tween', duration: 0.6 }}>
           <Image
             src={photo}
             alt='marek-lipcak-portrait'
@@ -69,6 +69,14 @@ const Intro = () => {
             className='bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full dark:text-white/60 dark:bg-white/10
             focus:scale-105 hover:text-gray-950 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack'>
             <BsLinkedin />
+          </a>
+
+          <a
+            href='https://www.instagram.com/marek.lipcak/'
+            target='_blank'
+            className='bg-white p-4 flex text-gray-700 items-center gap-2 rounded-full dark:text-white/60 dark:bg-white/10
+            focus:scale-105 hover:text-gray-950 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack'>
+            <BsInstagram />
           </a>
           <a
             href='https://github.com/mark-fender'

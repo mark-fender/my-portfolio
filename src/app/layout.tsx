@@ -39,7 +39,7 @@ const RootLayout = ({ children }: { children: ReactNode }) => {
     <html lang='en' className='!scroll-smooth' suppressHydrationWarning>
       <body
         className={`${satoshi.className}  bg-slate-200 text-gray-950 relative pt-28 sm:pt-36 
-      dark:bg-slate-900 dark:text-gray-50 dark:text-opacity-90`}>
+      dark:bg-slate-900 dark:text-gray-50 dark:text-opacity-900 overscroll-none`}>
         <div
           className='bg-[#a6afec] absolute top-[-6rem] -z-10 right-[11rem] 2xl:right-[25rem] h-[31.25rem] w-[31.25rem] rounded-full blur-[15rem] 
           sm:w-[68.75rem] dark:bg-[#5b639e]'

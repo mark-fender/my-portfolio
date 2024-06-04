@@ -22,7 +22,11 @@ const ThemeSwitcher = () => {
       rounded-full flex items-center justify-center hover:scale-[1.15] 
       active:scale-105 transition-all dark:bg-gray-950'
       onClick={switchTheme}>
-      {resolvedTheme === ThemeModes.LIGHT ? <BsLightbulbOff /> : <BsLightbulbFill />}
+      {resolvedTheme && resolvedTheme === ThemeModes.LIGHT ? (
+        <BsLightbulbOff />
+      ) : (
+        <BsLightbulbFill />
+      )}
     </button>
   );
 };

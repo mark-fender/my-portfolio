@@ -7,7 +7,7 @@ import useIsMobile from '@/hooks/useIsMobile';
 
 const About = () => {
   const { isMobile } = useIsMobile();
-  const { ref } = useSectionInView({ sectionName: 'About', threshold: isMobile ? 0.25 : 0.75 });
+  const { ref } = useSectionInView({ sectionName: 'About', threshold: isMobile ? 0.2 : 0.8 });
 
   return (
     <motion.section

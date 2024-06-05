@@ -7,11 +7,18 @@ import Link from 'next/link';
 import { BsArrowRight, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import useSectionInView from '@/hooks/useSectionInView';
 import useIsMobile from '@/hooks/useIsMobile';
+import { TypeAnimation } from 'react-type-animation';
+import { useEffect, useState } from 'react';
 
 const Intro = () => {
   const { isMobile } = useIsMobile();
   const { ref } = useSectionInView({ sectionName: 'Home', threshold: isMobile ? 0.25 : 0.75 });
+  const [mounted, setMounted] = useState(false);
   // const { setLastClickTime } = useActiveSection();
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   return (
     <section ref={ref} className='mt-8 max-w-[75rem] text-center sm:mb-0 scroll-mt-36' id='home'>
@@ -33,15 +40,26 @@ const Intro = () => {
         </motion.div>
       </div>
       <motion.h1
-        className='mb-10 mt-16 px-4 text-xl font- !leading-[1.5] sm:text-2xl'
+        className='w-fit h-fit mb-10 mt-16 px-8 text-xl font-!leading-[1.5] sm:text-2xl text-center sm:text-left'
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}>
         <span className='font-bold'>Hi, my name is Marek.</span> I am an experienced{' '}
         <span className='font-bold'>frontend developer</span> with{' '}
         <span className='font-bold'>6 years</span> of professional experience in web development. I
         am passionate about building responsive user interfaces with performance and attention to
-        detail in mind. My main focus is on <span className='font-bold'>ReactJS</span> &{' '}
-        <span className='font-bold'>NextJS</span>.
+        detail in mind. My main focus is on{' '}
+        {mounted && isMobile ? (
+          <span className='font-bold'>ReactJS</span>
+        ) : (
+          <TypeAnimation
+            className='font-bold'
+            sequence={['ReactJS.', 2000, 'NextJS.', 2000, 'Angular.', 2000]}
+            speed={50}
+            deletionSpeed={50}
+            repeat={Infinity}
+            style={{ fontSize: '1.5rem' }}
+          />
+        )}
       </motion.h1>
       <motion.div
         className='mt-16 flex flex-col sm:flex-row items-center justify-center gap-4 px-4 tex-lg font-medium'

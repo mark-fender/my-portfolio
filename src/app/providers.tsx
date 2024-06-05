@@ -7,7 +7,7 @@ import { ReactNode } from 'react';
 const Providers = ({ children }: { children: ReactNode }) => {
   return (
     <ActiveSectionContextProvider>
-      <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+      <ThemeProvider attribute='class' defaultTheme='dark' enableSystem>
         {children}
       </ThemeProvider>
     </ActiveSectionContextProvider>

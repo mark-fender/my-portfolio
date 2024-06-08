@@ -1,26 +1,16 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
-import { useState, useEffect } from 'react';
 import { BsLightbulbFill, BsLightbulbOff } from 'react-icons/bs';
+import useThemeSwitcher from './hooks/useThemeSwitcher';
 
-enum ThemeModes {
+export enum ThemeModes {
   LIGHT = 'light',
   DARK = 'dark',
 }
 
 const ThemeSwitcher = () => {
-  const [mounted, setMounted] = useState(false);
-  const { setTheme, resolvedTheme } = useTheme();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
-  const switchTheme = () => {
-    resolvedTheme === ThemeModes.DARK ? setTheme(ThemeModes.LIGHT) : setTheme(ThemeModes.DARK);
-  };
+  const { mounted, resolvedTheme, themeSwitchHandler } = useThemeSwitcher();
 
   if (!mounted) return null;
 
@@ -33,7 +23,7 @@ const ThemeSwitcher = () => {
       backdrop-blur-[0.5rem] border border-white border-opacity-40 shadow-xl 
       rounded-full flex items-center justify-center hover:scale-[1.15] 
       active:scale-105 transition-all dark:bg-gray-950'
-      onClick={switchTheme}>
+      onClick={themeSwitchHandler}>
       {resolvedTheme && resolvedTheme === ThemeModes.LIGHT ? (
         <BsLightbulbOff />
       ) : (

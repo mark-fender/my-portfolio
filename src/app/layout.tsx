@@ -3,7 +3,7 @@ import { ReactNode } from 'react';
 import '@/app/globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import ThemeSwitcher from '@/components/ThemeSwitcher';
+import ThemeSwitcher from '@/components/themeSwitcher/ThemeSwitcher';
 import { Toaster } from 'react-hot-toast';
 import Providers from '@/app/providers';
 import { Analytics } from '@vercel/analytics/react';

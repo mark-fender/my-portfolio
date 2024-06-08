@@ -1,30 +1,12 @@
 'use client';
 
-import useSectionInView from '@/hooks/useSectionInView';
 import SectionHeading from '@/components/SectionHeading';
 import { motion } from 'framer-motion';
-import { sendEmail } from '@/actions/sendEmail';
 import SubmitButton from '@/components/SubmitButton';
-import { MdCheck, MdClose } from 'react-icons/md';
-import toast, { Toast } from 'react-hot-toast';
-import CustomToast from '@/components/CustomToast';
+import useContact from './hooks/useContact';
 
 const Contact = () => {
-  const { ref } = useSectionInView({ sectionName: 'Contact' });
-
-  const handleFormSubmitAction = async (formData: FormData) => {
-    const { data, error } = await sendEmail(formData);
-    if (error) {
-      popToast(error, <MdClose />);
-    }
-    if (data) {
-      popToast('E-mail sent successfully!', <MdCheck />);
-    }
-  };
-
-  const popToast = (message: string, icon: JSX.Element) => {
-    toast.custom((toast: Toast) => <CustomToast toast={toast} message={message} icon={icon} />);
-  };
+  const { ref, handleFormSubmitAction } = useContact();
 
   return (
     <motion.section
@@ -46,7 +28,7 @@ const Contact = () => {
           type='email'
           autoComplete='off'
           name='senderEmail'
-          className='h-14 px-4 rounded-lg borderBlack dark:bg-gray-700'
+          className='h-14 px-4 rounded-lg borderBblack dark:bg-gray-700'
           placeholder='Your e-mail.'
         />
         <textarea
@@ -66,4 +48,3 @@ const Contact = () => {
 };
 
 export default Contact;
-

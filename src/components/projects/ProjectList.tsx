@@ -1,19 +1,12 @@
 'use client';
 
 import SectionHeading from '@/components/SectionHeading';
-import Project from '@/components/Project';
+import ProjectCard from '@/components/projects/ProjectCard';
 import { projectsData } from '@/lib/data';
-import useSectionInView from '@/hooks/useSectionInView';
-import { useRef } from 'react';
-import { useScroll } from 'framer-motion';
+import useProjectList from './hooks/useProjectList';
 
-const Projects = () => {
-  const { ref } = useSectionInView({ sectionName: 'Projects', threshold: 0.2 });
-  const projectsRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: projectsRef,
-    offset: ['start end', 'end end'],
-  });
+const ProjectList = () => {
+  const { ref, projectsRef, scrollYProgress } = useProjectList();
 
   return (
     <section ref={ref} id='projects' className='scroll-mt-36 mb-16'>
@@ -22,7 +15,7 @@ const Projects = () => {
         {projectsData.map((project, index) => {
           const targetScale = 1 - (projectsData.length - index) * 0.05;
           return (
-            <Project
+            <ProjectCard
               key={index}
               index={index}
               {...project}
@@ -37,4 +30,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectList;

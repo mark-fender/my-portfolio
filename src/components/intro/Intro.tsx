@@ -5,20 +5,11 @@ import photo from '/public/assets/photo.jpeg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsGithub, BsInstagram, BsLinkedin } from 'react-icons/bs';
-import useSectionInView from '@/hooks/useSectionInView';
-import useIsMobile from '@/hooks/useIsMobile';
 import { TypeAnimation } from 'react-type-animation';
-import { useEffect, useState } from 'react';
+import useIntro from './hooks/useIntro';
 
 const Intro = () => {
-  const { isMobile } = useIsMobile();
-  const { ref } = useSectionInView({ sectionName: 'Home', threshold: isMobile ? 0.25 : 0.75 });
-  const [mounted, setMounted] = useState(false);
-  // const { setLastClickTime } = useActiveSection();
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  const { isMobile, ref, mounted } = useIntro();
 
   return (
     <section ref={ref} className='mt-8 max-w-[75rem] text-center sm:mb-0 scroll-mt-36' id='home'>

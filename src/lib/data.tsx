@@ -44,7 +44,7 @@ export const experiencesData = [
     title: 'Front-End Developer',
     company: 'Workflows',
     description:
-      'Part of a development team responsible for development, testing and maintenance of frontend projects, mostly for Austrian client NTS Retail. In this position I started out as a junior developer and after aquiring lots of experience I was able to built several projects from scratch and helped to refactor and improve code quality in legacy codebase.',
+      'Part of a development team responsible for development, testing and maintenance of frontend projects, mostly for Austrian client NTS Retail. In this position I started out as a junior developer and after acquiring lots of experience I was able to built several projects from scratch and helped to refactor and improve code quality in legacy codebase.',
     date: 'September 2018 - October 2022',
   },
   {

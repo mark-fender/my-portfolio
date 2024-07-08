@@ -30,28 +30,28 @@ export const experiencesData = [
     title: 'Front-End Developer',
     company: 'Indra Avitech',
     description:
-      'Part of a development team responsible for development and testing of frontend of applications used by employees in aviation sector. Greatly contributed to improving visual design and usability of developed products and increasing test coverage of the codebase.',
+      'Part of a development team responsible for development and testing of frontend of applications used by employees in aviation sector where I greatly contributed to improving visual design and usability of developed products and increasing test coverage of the codebase. In this team we were solving challenges like dynamically generating forms based on complex data models, designing and implementing layouts with multiple content panels enabling users to effectively edit forms and maps at the same time and utilizing best coding practices and architecture design to transform large nested objects of data into shortend, easily readable messages encoded according to domain rules also known as digital NOTAMs.',
     date: 'May 2023 - present',
   },
   {
     title: 'Front-End Developer',
     company: ' Global Logic',
     description:
-      'Lead the development of user interface for controlling sample registration module that processes samples of patients tissue in medical environment.',
+      'Lead the development of user interface for controlling sample registration module that processes samples of patients tissue in medical environment. As a single frontend developer I was responsible for designing architecture, implementing authentication, authorization and user management and using WebSockets to provide real time updates on processing state.',
     date: 'November 2022 - April 2023',
   },
   {
     title: 'Front-End Developer',
     company: 'Workflows',
     description:
-      'Development, testing and maintenance of frontend projects, mostly for Austrian client NTS Retail. Built several projects from scratch and helped to refactor and improve code quality in legacy codebase.',
+      'Part of a development team responsible for development, testing and maintenance of frontend projects, mostly for Austrian client NTS Retail. In this position I started out as a junior developer and after aquiring lots of experience I was able to built several projects from scratch and helped to refactor and improve code quality in legacy codebase.',
     date: 'September 2018 - October 2022',
   },
   {
     title: 'Software Engineer',
     company: 'Software AG',
     description:
-      'Testing software features using JUnit and Selenium and development of internal tools. Managed to optimize stability and execution times of existing test suites.',
+      'Part time position I started as a student where my main tasks included testing software features using JUnit and Selenium and development of internal tools. Managed to optimize stability and execution times of existing test suites.',
     date: 'September 2017 - September 2018',
   },
 ] as const;
@@ -123,6 +123,8 @@ export const projectsData = [
       'TypeScript',
       'Emotion',
       'React Hook Form',
+      'Redux',
+      'Jest',
       'GitHub',
       'WebSocket',
       'REST API',
@@ -158,6 +160,7 @@ export const skillsData = [
   'Angular',
   'Jest',
   'React Query',
+  'Redux',
   'Git',
   'Tailwind',
   'Emotion',

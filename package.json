@@ -10,7 +10,7 @@
     "lint:fix": "eslint --fix ."
   },
   "dependencies": {
-    "@react-email/components": "^0.0.19",
+    "@react-email/components": "^0.0.21",
     "@react-email/tailwind": "^0.0.18",
     "@types/node": "20.14.10",
     "@types/react": "18.3.3",

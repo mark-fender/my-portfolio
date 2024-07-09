@@ -5,7 +5,7 @@ import CustomToast from '@/components/CustomToast';
 import { MdCheck, MdClose } from 'react-icons/md';
 
 const useContact = () => {
-  const { ref } = useSectionInView({ sectionName: 'Contact' });
+  const { sectionRef } = useSectionInView({ sectionName: 'Contact' });
 
   const handleFormSubmitAction = async (formData: FormData) => {
     const { data, error } = await sendEmail(formData);
@@ -22,7 +22,7 @@ const useContact = () => {
   };
 
   return {
-    ref,
+    sectionRef,
     handleFormSubmitAction,
   };
 };

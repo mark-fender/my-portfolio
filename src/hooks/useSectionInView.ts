@@ -19,7 +19,7 @@ const useSectionInView = ({ sectionName, threshold = 0.75 }: UseSectionInViewPro
     }
   }, [inView, lastClickTime, sectionName, setActiveSection]);
 
-  return { ref };
+  return { sectionRef: ref };
 };
 
 export default useSectionInView;

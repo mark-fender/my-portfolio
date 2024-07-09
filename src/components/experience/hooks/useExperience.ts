@@ -5,7 +5,7 @@ import { useRef } from 'react';
 
 const useExperience = () => {
   const { isMobile } = useIsMobile();
-  const { ref: sectionRef } = useSectionInView({
+  const { sectionRef } = useSectionInView({
     sectionName: 'Experience',
     threshold: isMobile ? 0.3 : 0.9,
   });

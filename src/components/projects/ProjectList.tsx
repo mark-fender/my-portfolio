@@ -6,10 +6,10 @@ import { projectsData } from '@/lib/data';
 import useProjectList from './hooks/useProjectList';
 
 const ProjectList = () => {
-  const { ref, projectsRef, scrollYProgress } = useProjectList();
+  const { sectionRef, projectsRef, scrollYProgress } = useProjectList();
 
   return (
-    <section ref={ref} id='projects' className='scroll-mt-36 mb-16'>
+    <section ref={sectionRef} id='projects' className='scroll-mt-36 mb-16'>
       <div ref={projectsRef}>
         <SectionHeading>My Projects</SectionHeading>
         {projectsData.map((project, index) => {

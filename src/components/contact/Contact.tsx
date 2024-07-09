@@ -6,11 +6,11 @@ import SubmitButton from '@/components/SubmitButton';
 import useContact from './hooks/useContact';
 
 const Contact = () => {
-  const { ref, handleFormSubmitAction } = useContact();
+  const { sectionRef, handleFormSubmitAction } = useContact();
 
   return (
     <motion.section
-      ref={ref}
+      ref={sectionRef}
       id='contact'
       className='mb-24 w-[min(100%,38rem)]'
       initial={{ opacity: 0 }}

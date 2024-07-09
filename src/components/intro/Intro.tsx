@@ -9,10 +9,13 @@ import { TypeAnimation } from 'react-type-animation';
 import useIntro from './hooks/useIntro';
 
 const Intro = () => {
-  const { isMobile, ref, mounted } = useIntro();
+  const { isMobile, sectionRef, mounted } = useIntro();
 
   return (
-    <section ref={ref} className='mt-8 max-w-[75rem] text-center sm:mb-0 scroll-mt-36' id='home'>
+    <section
+      ref={sectionRef}
+      className='mt-8 max-w-[75rem] text-center sm:mb-0 scroll-mt-36'
+      id='home'>
       <div className='flex items-center justify-center pt-2'>
         <motion.div
           className='mb-8'
@@ -63,14 +66,6 @@ const Intro = () => {
           focus:scale-105 hover:scale-105 hover:bg-gray-950 dark:bg-gray-950 active:scale-102 transition group'>
           Contact me <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition' />
         </Link>
-        {/* <a
-          href='/CV.pdf'
-          onClick={() => setLastClickTime(Date.now())}
-          download
-          className='bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none 
-          focus:scale-105 hover:scale-105 active:scale-102 transition group cursor-pointer borderBlack dark:bg-white/10'>
-          Download CV <HiDownload className='opacity-70 group-hover:translate-y-1 transition' />
-        </a> */}
         <div className='flex flex-row gap-2'>
           <a
             href='https://linkedin.com/in/marek-lipčák'

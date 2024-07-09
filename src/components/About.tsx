@@ -7,11 +7,11 @@ import useIsMobile from '@/hooks/useIsMobile';
 
 const About = () => {
   const { isMobile } = useIsMobile();
-  const { ref } = useSectionInView({ sectionName: 'About', threshold: isMobile ? 0.2 : 0.8 });
+  const { sectionRef } = useSectionInView({ sectionName: 'About', threshold: isMobile ? 0.2 : 0.8 });
 
   return (
     <motion.section
-      ref={ref}
+      ref={sectionRef}
       className='max-w-[45rem] text-center leading-8 scroll-mt-36'
       initial={{ opacity: 0, y: 100 }}
       animate={{ opacity: 1, y: 0 }}

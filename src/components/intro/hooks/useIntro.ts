@@ -4,7 +4,10 @@ import { useState, useEffect } from 'react';
 
 const useIntro = () => {
   const { isMobile } = useIsMobile();
-  const { ref } = useSectionInView({ sectionName: 'Home', threshold: isMobile ? 0.25 : 0.75 });
+  const { sectionRef } = useSectionInView({
+    sectionName: 'Home',
+    threshold: isMobile ? 0.25 : 0.75,
+  });
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
@@ -13,7 +16,7 @@ const useIntro = () => {
 
   return {
     isMobile,
-    ref,
+    sectionRef,
     mounted,
   };
 };

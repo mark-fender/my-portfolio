@@ -22,10 +22,13 @@ const fadeInAnimationVariants = {
 
 const Skills = () => {
   const { isMobile } = useIsMobile();
-  const { ref } = useSectionInView({ sectionName: 'Skills', threshold: isMobile ? 0.5 : 0.9 });
+  const { sectionRef } = useSectionInView({
+    sectionName: 'Skills',
+    threshold: isMobile ? 0.5 : 0.9,
+  });
 
   return (
-    <section ref={ref} className='max-w-[53rem] scroll-mt-36 text-center' id='skills'>
+    <section ref={sectionRef} className='max-w-[53rem] scroll-mt-36 text-center' id='skills'>
       <SectionHeading>My skills</SectionHeading>
       <ul className='flex flex-wrap justify-center gap-2 text-lg text-gray-800 dark:text-gray-50'>
         {skillsData.map((skill, index) => (

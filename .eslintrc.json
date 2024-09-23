@@ -4,6 +4,5 @@
     "react/self-closing-comp": "error",
     "@typescript-eslint/no-unused-vars": "error",
     "unused-imports/no-unused-imports": "error"
-  },
-  "plugins": ["@typescript-eslint", "unused-imports"]
+  }
 }

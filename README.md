@@ -1,1 +1,1 @@
-My personal web developer portfolio built in NextJS.
+My personal web developer portfolio built with NextJS.

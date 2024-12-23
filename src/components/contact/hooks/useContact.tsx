@@ -3,6 +3,7 @@ import useSectionInView from '@/hooks/useSectionInView';
 import toast, { Toast } from 'react-hot-toast';
 import CustomToast from '@/components/CustomToast';
 import { MdCheck, MdClose } from 'react-icons/md';
+import { JSX } from 'react';
 
 const useContact = () => {
   const { sectionRef } = useSectionInView({ sectionName: 'Contact' });
